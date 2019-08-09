@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+</head>
+<body>
+    <div class="head"></div>
+    <div class="main">
+        <!--导航-->
+        <div class="main_left">
+            <!--<menu_item></menu_item>-->
+            <div style="display: flex;flex-direction: column;width: 150px;">
+                <button v-for="btn in btns" @mouseenter="enter(btn)" @mouseleave="leave(btn)" :style="{background:btn.bg}" @click="nav(btn)">
+                    <font :style="{color:btn.fc}">{{btn.name}}</font>
+                </button>
+            </div>
+        </div>
+        <div class="main_right">
+            <div class="center" style="margin-top: 30px;">
+                <table class="tb">
+                    <tbody>
+                        <tr>
+                            <td>医院名称：</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><p></p></td><td></td>
+                        </tr>
+                        <tr>
+                            <td>院长：</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><p></p></td><td></td>
+                        </tr>
+                        <tr>
+                            <td>医院地址：</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><p></p></td><td></td>
+                        </tr>
+                        <tr>
+                            <td>医院电话</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><p></p></td><td></td>
+                        </tr>
+                        <tr>
+                            <td>医院传真</td>
+                            <td><input type="text"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="center" style="margin-top: 30px;">
+                <button>确定</button>
+                <button style="margin-left: 35px;">取消</button>
+            </div>
+        </div>
+    </div>
+    <div class="foot"></div>
+
+    <script src="../config/js/vue.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/增加医院.js"></script>
+    <style type="text/css">@import url("../config/css/all.css");</style>
+
+</body>
+</html>

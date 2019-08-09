@@ -1,0 +1,69 @@
+*{
+    font-size: 18px;
+    font-family: 'KaiTi';
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    position: relative;
+    left: 50%;
+    margin-left: -40%;
+    margin-top: 20px;
+}
+
+.head{
+    background: rgb(135, 183, 255);
+    height: 50px;
+    width: 100%;
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    _height:680px; 
+    min-height:680px;
+}
+
+.main_left{
+    border-left: 1px solid rgb(135, 183, 255);
+    border-right: 1px solid rgb(135, 183, 255);
+}
+
+.main_right{
+    width: 100%;
+    border-right: 1px solid rgb(135, 183, 255);
+}
+
+.main_right .center{
+    display: flex;
+    justify-content: center;
+}
+
+.foot{
+    background: rgb(135, 183, 255);
+    height: 40px;
+}
+
+.tb thead td{
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    width: 110px;
+    text-align: center;
+}
+
+.tb tbody td{
+    border-bottom: 1px solid #cccccc;
+    width: 110px;
+    text-align: center;
+}
+
+.on{
+    width: 100px;
+    height: 30px;
+    position: relative;
+    margin-bottom: 35px;
+    margin-left: 100px;
+}
+

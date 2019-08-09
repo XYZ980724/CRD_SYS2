@@ -1,0 +1,51 @@
+
+var main_right=new Vue({
+    el:".main_right",
+    data:{
+        show:0,
+        item:[],
+        items:[
+            {
+                item_id:1,
+                item_name:"***",
+                item_hos:"***",
+                dt:[
+                    {id:1,oName:"关于阿司匹林的研究",doc:"张医生",inNum:"157",pName:"jack",pSex:"male",pBirth:"1994-7-15",inDate:"2018-9-29",rdNum:"84-2"},
+                    {id:2,oName:"关于阿司匹林的研究",doc:"张医生",inNum:"157",pName:"jack",pSex:"male",pBirth:"1994-7-15",inDate:"2018-9-29",rdNum:"84-2"},
+                    {id:3,oName:"关于阿司匹林的研究",doc:"张医生",inNum:"157",pName:"jack",pSex:"male",pBirth:"1994-7-15",inDate:"2018-9-29",rdNum:"84-2"},
+                ]
+            },
+            {
+                item_id:2,
+                item_name:"****",
+                item_hos:"****",
+                dt:[
+                    {id:1,oName:"关于***的研究",doc:"张医生",inNum:"157",pName:"jack",pSex:"male",pBirth:"1994-7-15",inDate:"2018-9-29",rdNum:"84-2"},
+                    {id:2,oName:"关于***的研究",doc:"张医生",inNum:"157",pName:"jack",pSex:"male",pBirth:"1994-7-15",inDate:"2018-9-29",rdNum:"84-2"},
+                    {id:3,oName:"关于***的研究",doc:"张医生",inNum:"157",pName:"jack",pSex:"male",pBirth:"1994-7-15",inDate:"2018-9-29",rdNum:"84-2"},
+                    {id:4,oName:"关于***的研究",doc:"张医生",inNum:"157",pName:"jack",pSex:"male",pBirth:"1994-7-15",inDate:"2018-9-29",rdNum:"84-2"},
+                    {id:6,oName:"关于***的研究",doc:"张医生",inNum:"157",pName:"jack",pSex:"male",pBirth:"1994-7-15",inDate:"2018-9-29",rdNum:"84-2"},
+                    {id:7,oName:"关于***的研究",doc:"张医生",inNum:"157",pName:"jack",pSex:"male",pBirth:"1994-7-15",inDate:"2018-9-29",rdNum:"84-2"},
+                    {id:10,oName:"关于***的研究",doc:"张医生",inNum:"157",pName:"jack",pSex:"male",pBirth:"1994-7-15",inDate:"2018-9-29",rdNum:"84-2"},
+                    {id:11,oName:"关于***的研究",doc:"张医生",inNum:"157",pName:"jack",pSex:"male",pBirth:"1994-7-15",inDate:"2018-9-29",rdNum:"84-2"},
+                    {id:78,oName:"关于***的研究",doc:"张医生",inNum:"157",pName:"jack",pSex:"male",pBirth:"1994-7-15",inDate:"2018-9-29",rdNum:"84-2"},
+                ]
+            }
+        ]
+    },
+    methods:{
+        nav_detial:function(id){
+            for (let index = 0; index < this.items.length; index++) {
+                if(id==this.items[index].item_id){
+                    console.log(index);
+                    this.item=this.items[index].dt;
+                    this.show=1;
+                    break;
+                }
+                else{
+                    this.show=0;
+                }
+            }
+        }
+    }
+})

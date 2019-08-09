@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>医院列表</title>
+</head>
+<body>
+    <div class="head"></div>
+    <div class="main">
+        <!--导航-->
+        <div class="main_left">
+            <!--<menu_item></menu_item>-->
+            <div style="display: flex;flex-direction: column;width: 150px;">
+                <button v-for="btn in btns" @mouseenter="enter(btn)" @mouseleave="leave(btn)" :style="{background:btn.bg}" @click="nav(btn)">
+                    <font :style="{color:btn.fc}">{{btn.name}}</font>
+                </button>
+            </div>
+        </div>
+        <div class="main_right">
+            <div class="center">
+                <form action="" style="padding: 30px;">
+                    院长：
+                    <input type="text">
+                    <input type="submit" value="搜索">
+                </form>
+                <form action="" style="padding: 30px;">
+                    医院名称：
+                    <input type="text">
+                    <input type="submit" value="搜索">
+                </form>
+            </div>
+            <div class="center">
+                <table class="tb">
+                    <thead>
+                        <tr>
+                            <td style="background:white;">编号</td>
+                            <td style="background:#cccccc;">医院名称</td>
+                            <td style="background:white;">院长</td>
+                            <td style="background:#cccccc;">电话</td>
+                            <td style="background:white;">传真</td>
+                            <td style="background:#cccccc;">邮政编码</td>
+                            <td style="background:white;">操作栏</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="hos in hospitals" v-if="hos.name!=null">
+                            <td style="background:white;">{{hos.id}}</td>
+                            <td style="background:#cccccc;">{{hos.name}}</td>
+                            <td style="background:white;">{{hos.boss}}</td>
+                            <td style="background:#cccccc;">{{hos.phone}}</td>
+                            <td style="background:white;">{{hos.fax}}</td>
+                            <td style="background:#cccccc;">{{hos.pos}}</td>
+                            <td style="background:white;">
+                                <button @click="change(hos)">修改</button>
+                                <button @click="del(hos)">删除</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="foot"></div>
+
+    <script src="../config/js/vue.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/医院列表.js"></script>
+    <style type="text/css">@import url("../config/css/all.css");</style>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <button v-for="btn in btns" @mouseenter="enter(btn)" @mouseleave="leave(btn)" :style="{background:btn.bg}">{{btn.name}}</button>
+    </div>
+
+    <script src="../config/js/vue.js"></script>
+    <script>
+        new Vue({
+            el:".main",
+            data:{
+                btns:[
+                    {id:1,name:"首页",bg:'red'},
+                    {id:2,name:"项目管理",bg:'red'},
+                ],
+            },
+            methods:{
+                enter:function(obj){
+                    obj.bg='#cccccc';
+                },
+                leave:function(obj){
+                    obj.bg='red';
+                }
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div class="head"></div>
+        <div class="main">
+            <!--导航-->
+        <div class="main_left">
+            <!--<menu_item></menu_item>-->
+            <div style="display: flex;flex-direction: column;width: 150px;">
+                <button v-for="btn in btns" @mouseenter="enter(btn)" @mouseleave="leave(btn)" :style="{background:btn.bg}" @click="nav(btn)">
+                    <font :style="{color:btn.fc}">{{btn.name}}</font>
+                </button>
+            </div>
+        </div>
+        <div class="main_right">
+            <div class="center" style="margin-top: 30px;">
+                <table class="tb">
+                    <tbody>
+                        <tr>
+                            <td>项目名称：</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><p></p></td><td></td>
+                        </tr>
+                        <tr>
+                            <td>样本量：</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><p></p></td><td></td>
+                        </tr>
+                        <tr>
+                            <td>是否随机：</td>
+                            <td>
+                                <select name="random" style="width: 100%;">
+                                <option value="1">是</option>
+                                <option value="0">否</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p></p></td><td></td>
+                        </tr>
+                        <tr>
+                            <td>申办组织：</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><p></p></td><td></td>
+                        </tr>
+                        <tr>
+                            <td>设盲模式</td>
+                            <td>
+                            <select name="random" style="width: 100%;">
+                            <option value="1">单盲</option>
+                            <option value="2">双盲</option>
+                            </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><p></p></td><td></td>
+                        </tr>
+                        <tr>
+                            <td>临床实验类型：</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td><p></p></td><td></td>
+                        </tr>
+                        <tr>
+                            <td>实验持续时间</td>
+                            <td><input type="text"></td>
+                            <td>天</td>
+                        </tr>
+                        <tr>
+                            <td><p></p></td><td></td>
+                        </tr>
+                        <tr>
+                            <td>状态</td>
+                            <td><input type="text"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="center" style="margin-top: 30px;">
+                <button>确定</button>
+                <button style="margin-left: 35px;">提交</button>
+            </div>
+        </div>
+        </div>
+        <div class="foot"></div>
+    
+        <script src="../config/js/vue.js"></script>
+        <script src="js/data.js"></script>
+        <script src="js/新增项目.js"></script>
+        <style type="text/css">@import url("../config/css/all.css");</style>
+</body>
+</html>

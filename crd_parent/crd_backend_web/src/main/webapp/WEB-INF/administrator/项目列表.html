@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>项目列表</title>
+</head>
+<body>
+    <div class="head"></div>
+    <div class="main">
+        <!--导航-->
+        <div class="main_left">
+            <!--<menu_item></menu_item>-->
+            <div style="display: flex;flex-direction: column;width: 150px;">
+                <button v-for="btn in btns" @mouseenter="enter(btn)" @mouseleave="leave(btn)" :style="{background:btn.bg}" @click="nav(btn)">
+                    <font :style="{color:btn.fc}">{{btn.name}}</font>
+                </button>
+            </div>
+        </div>
+        <div class="main_right">
+            <div class="center" style="margin-top: 30px;">
+                <table class="tb">
+                    <thead>
+                        <tr>
+                            <td></td><td></td><td></td><td></td>
+                            <td></td><td></td><td></td><td></td><td></td>
+                            <td><button @click="nav_add" style="width: 100%">+新增项目</button></td>
+                        </tr>
+                        <tr>
+                            <td style="background:white;">编号</td>
+                            <td style="background:#cccccc;">研究名称</td>
+                            <td style="background:white;">样本量</td>
+                            <td style="background:#cccccc;">是否随机</td>
+                            <td style="background:white;">申办项目组织</td>
+                            <td style="background:#cccccc;">设盲模式</td>
+                            <td style="background:white;">实验类型</td>
+                            <td style="background:#cccccc;">持续时间</td>
+                            <td style="background:white;">项目状态</td>
+                            <td style="background:#cccccc;">操作栏</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="item in items">
+                            <td style="background:white;">{{item.id}}</td>
+                            <td style="background:#cccccc;">{{item.exName}}</td>
+                            <td style="background:white;">{{item.number}}</td>
+                            <td style="background:#cccccc;">{{item.isRandom}}</td>
+                            <td style="background:white;">{{item.hos}}</td>
+                            <td style="background:#cccccc;">{{item.see}}</td>
+                            <td style="background:white;">{{item.exType}}</td>
+                            <td style="background:#cccccc;">{{item.exDay}}</td>
+                            <td style="background:white;">{{item.state}}</td>
+                            <td style="background:#cccccc; width: 144px;">
+                                <font @click="sel(item)">选择|</font>
+                                <font @click="cha(item)">修改|</font>
+                                <font @click="del(item)">删除</font>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="foot"></div>
+
+    <script src="../config/js/vue.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/项目列表.js"></script>
+    <style type="text/css">@import url("../config/css/all.css");</style>
+</body>
+</html>

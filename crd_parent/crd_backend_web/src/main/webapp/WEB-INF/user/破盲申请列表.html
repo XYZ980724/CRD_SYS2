@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+</head>
+<body>
+    <div class="head"></div>
+    <div class="main">
+        <!--导航-->
+        <div class="main_left">
+            <div style="display: flex;flex-direction: column;width: 150px;">
+                <button v-for="btn in btns" @mouseenter="enter(btn)" @mouseleave="leave(btn)" :style="{background:btn.bg}" @click="nav(btn)">
+                    <font :style="{color:btn.fc}">{{btn.name}}</font>
+                </button>
+            </div>
+        </div>
+        
+        <div class="main_right">
+            <div class="center" style="margin-top: 30px;">
+                <table class="tb">
+                    <tbody>
+                        <tr><td>受试者基本信息：</td></tr>
+                        <tr>
+                            <td>姓名：</td>
+                            <td><input type="text"></td>
+                            <td>出生日期：</td>
+                            <td><input type="text"></td>
+                            <td>性别：</td>
+                            <td><input type="text"></td>
+                        </tr>
+
+                        <tr><td><p></p></td></tr>
+                        <tr><td>病种症候：</td></tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="text"></td>
+                        </tr>
+                        
+                        <tr><td><p></p></td></tr>
+                        <tr><td>其他分层因素：</td></tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="text"></td>
+                        </tr>
+                        
+                        <tr><td><p></p></td></tr>
+                        <tr><td>医生信息：</td></tr>
+                        <tr>
+                            <td>研究者：</td>
+                            <td><input type="text"></td>
+                            <td>纳入日期：</td>
+                            <td><input type="text"></td>
+                            <td>医院：</td>
+                            <td><input type="text"></td>
+                        </tr>
+
+                        <tr><td><p></p></td></tr>
+                        <tr><td>破忙申请：</td></tr>
+                        <tr>
+                            <td>破盲原因：</td>
+                            <td><input type="text"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="center" style="margin-top: 30px;">
+                <button>确定破盲</button>
+                <button style="margin-left: 100px;">放回</button>
+            </div>
+        </div>
+    </div>
+    <div class="foot"></div>
+    <script src="../config/js/vue.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/破盲申请列表.js"></script>
+    <style type="text/css">@import url("../config/css/all.css");</style>
+</body>
+</html>
