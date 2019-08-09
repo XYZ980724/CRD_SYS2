@@ -11,7 +11,7 @@
         <button v-for="btn in btns" @mouseenter="enter(btn)" @mouseleave="leave(btn)" :style="{background:btn.bg}">{{btn.name}}</button>
     </div>
 
-    <script src="../config/js/vue.js"></script>
+    <script src="${pageContext.request.contextPath}/config/js/vue.js"></script>
     <script>
         new Vue({
             el:".main",

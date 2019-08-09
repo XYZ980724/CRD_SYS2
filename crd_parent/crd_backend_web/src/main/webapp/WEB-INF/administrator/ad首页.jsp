@@ -1,3 +1,5 @@
+<%@page contentType="text/html; charset=utf-8" language="java" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,10 +25,10 @@
     </div>
     <div class="foot"></div>
 
-    <script src="../config/js/vue.js"></script>
+    <script src="${pageContext.request.contextPath}/config/js/vue.js"></script>
     <script src="js/data.js"></script>
     <script src="js/首页.js"></script>
-    <style type="text/css">@import url("../config/css/all.css");</style>
+    <style type="text/css">@import url("${pageContext.request.contextPath}/config/css/all.css");</style>
 
 </body>
 </html>

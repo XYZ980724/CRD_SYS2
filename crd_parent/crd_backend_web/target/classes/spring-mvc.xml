@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <mvc:annotation-driven/>
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+    
+    <mvc:view-controller path="/showLogin" view-name="中央随机分配系统"/>
+
+    <mvc:resources mapping="/administrator/css/**" location="/WEB-INF/administrator/css/"/>
+    <mvc:resources mapping="/administrator/js/**" location="/WEB-INF/administrator/js/"/>
+    <mvc:resources mapping="/config/css/**" location="/WEB-INF/config/css/"/>
+    <mvc:resources mapping="/config/js/**" location="/WEB-INF/config/js/"/>
+    <mvc:resources mapping="/user/css/**" location="/WEB-INF/user/css/"/>
+    <mvc:resources mapping="/user/js/**" location="/WEB-INF/user/js/"/>
+
+
+</beans>
